@@ -2,7 +2,6 @@ package com.example.db.controller;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,7 +15,6 @@ import com.example.db.service.MovieService;
 @RequestMapping("/api/movies")
 public class MovieController {
 
-    @Autowired
     private final MovieService movieService;
 
     public MovieController(MovieService movieService) {
@@ -38,9 +36,4 @@ public class MovieController {
             return ResponseEntity.notFound().build();
         }
     }
-
-    // Outros métodos GET para operações de leitura (read)
-
-    // Outros métodos HTTP (POST, PUT, DELETE) para operações de escrita (create,
-    // update, delete)
 }
