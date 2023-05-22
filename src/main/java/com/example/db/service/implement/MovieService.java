@@ -1,4 +1,4 @@
-package com.example.db.service;
+package com.example.db.service.implement;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.example.db.model.Movie;
 import com.example.db.repository.MovieRepository;
-import com.example.db.service.interfaces.IMovieService;
+import com.example.db.service.IMovieService;
 
 @Service
 public class MovieService implements IMovieService {

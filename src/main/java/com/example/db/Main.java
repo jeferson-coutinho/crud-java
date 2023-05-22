@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
 import com.example.db.model.Movie;
-import com.example.db.service.MovieService;
+import com.example.db.service.implement.MovieService;
 
 @SpringBootApplication
 public class Main {
@@ -29,6 +29,5 @@ public class Main {
         for (Movie movie : movies) {
             System.out.println(movie.toString());
         }
-    }    
+    }
 }
-

@@ -9,27 +9,27 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.db.model.Movie;
-import com.example.db.service.MovieService;
+import com.example.db.service.IMovieService;
 
 @RestController
 @RequestMapping("/api/movies")
 public class MovieController {
 
-    private final MovieService movieService;
+    private final IMovieService imovieService;
 
-    public MovieController(MovieService movieService) {
-        this.movieService = movieService;
+    public MovieController(IMovieService imovieService) {
+        this.imovieService = imovieService;
     }
 
     @GetMapping
     public ResponseEntity<List<Movie>> getAllMovies() {
-        List<Movie> movies = movieService.getAllMovies();
+        List<Movie> movies = imovieService.getAllMovies();
         return ResponseEntity.ok(movies);
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<Movie> getMovieById(@PathVariable Long id) {
-        Movie movie = movieService.getMovieById(id);
+        Movie movie = imovieService.getMovieById(id);
         if (movie != null) {
             return ResponseEntity.ok(movie);
         } else {

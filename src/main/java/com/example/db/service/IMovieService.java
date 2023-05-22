@@ -1,4 +1,4 @@
-package com.example.db.service.interfaces;
+package com.example.db.service;
 
 import java.util.List;
 import java.math.BigDecimal;
